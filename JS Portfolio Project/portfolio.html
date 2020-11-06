@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derek mccool projects</title>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div><a href="index.html">derek mccool</a></div>
+        <div><a href="portfolio.html">portfolio</a></div>
+        <div><a href="contact.html">contact</a></div>
+        <div>
+            <form action="index.html" method="GET" id="login-form" class="form"> 
+                <label for="username" >username</label>
+                <input type="text" name="username" id="username" />
+                <label for="username">password</label>
+                <input type="text" name="password" id="password" />
+                <button type="submit" id="submit">login</button>
+            </form>
+            <div class="hidden" id="logout" onclick="logOut()"><button>logout</button></div>
+        </div>
+    </nav>
+    <h2 id="welcome" class="hidden">Welcome!</h2>
+    <h1>my projects</h1>
+    <section>
+        <h2>cyberpunk style vending machine</h2>
+        <button class="project-expander" onclick="toggleExpand(event)" value="proj1">See Details</button>
+        <div class="project-collapse" id="proj1">
+                <h3>description</h3>
+                <p>the purpose of this project was to create a user interface for a vending machine.  items from the machine were to be obtained by calling to an api.</p>
+                <p>my apprach was to design the vending machine with a cyberpunk aesthetic.</p>
+                <h3>goals</h3>
+                <ul>
+                    <li>users should be able to click on a menu item and it should display in the message window</li>
+                    <li>users should be able add money to the vending machine, it should display in the balance</li>
+                    <li>users should be able to click purchase after selecting an item, displaying the result in the message window</li>
+                    <li>users should be alerted if an item is out of stock or if purchase is attempted when balance is less than cost of item</li>
+                    <li>after purchase,  the user should receive their change and balance should be set to 0</li>
+                </ul>
+                <h3>technologies</h3>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>ajax</li>
+                    <li>jquery</li>
+                </ul>
+               <a href="https://cyberpunkvending.herokuapp.com/" target="blank"><button>Demo</button></a>
+               <a href="https://github.com/derekmccool/vending-machine" target="blank"><button>Github</button></a>
+        </div>
+       
+    </section>
+    <section>
+        <h2>library management system</h2>
+        <button class="project-expander" onclick="toggleExpand(event)" value="proj2">See Details</button>
+        <div class="project-collapse" id="proj2">
+            <h3>description</h3>
+            <p>the purpose of this project was to create an application that allowed librarians to make edits to books in a library, and grant access to patrons</p>
+            <p>this was a group project, utilizing an agile environment</p>
+
+            <h3>goals</h3>
+            <ul>
+                <li>librarians and patrons should be able to login </li>
+                <li>librarians and patrons should be able to view all books in the library</li>
+                <li>librarians create/update/delete books and grant access to patrons</li>
+                <li>patrons should be able to checkout books if their account has been granted access</li>
+                <li>patrons should not be able to check out a book that is currently checked out by another patron</li>
+                <li>patrons should be able to return books</li>
+
+            </ul>
+  
+            <h3>technologies</h3>
+            <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>java</li>
+                <li>jsp servlets</li>
+                <li>tomcat</li>
+            </ul>
+    
+           <a href="https://github.com/CryptoDimaino/LibraryCrudProject" target="blank"><button>Github</button></a>
+        </div>
+    </section>
+  
+    <script type="text/javascript" src="js/projects.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

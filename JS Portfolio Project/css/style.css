@@ -1,0 +1,87 @@
+:root{
+    --secondary-color: #f16e4a;
+    --primary-color: #00c7ff;
+}
+body{
+    text-align: center;
+}
+
+nav{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    color: white;
+    font-size: 2em;
+}
+
+#pictures{
+    display: grid;
+    margin-top: 2em;
+    height: 25em;
+}
+
+img{
+    height: 300px;
+}
+
+.hidden{
+      display: none;
+  }
+
+.image-fader{
+    animation: fadeInOut  ease 10s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+.project-collapse{
+    display: none;
+}
+
+.project-expand{
+    max-height: 400px;
+    animation: fadeIn ease 2s;
+}
+
+.login-modal{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: .75;
+    align-items: center;
+}
+
+.modal-body{
+    position: relative;
+    height: 300px;
+    width: 400px;
+    opacity: 1;
+    background-color: white;
+    align-self: center;
+}
+
+@keyframes fadeInOut {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.welcome-fade{
+    animation: fadeOut ease 5s;
+    animation-iteration-count: 1
+    opacity: 0;
+
+}

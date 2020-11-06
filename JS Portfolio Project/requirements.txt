@@ -1,0 +1,54 @@
+Personal Bio Project:
+Use HTML, CSS, and Javascript
+    1) Every page has a conisitent header and footer
+    2) Consistent Sidebar with soical media links optional
+    3) Bootstrap optional
+    4) None of the data needs to persist, or move between pages
+3 HTML Pages
+    1) Landing Page (index.html)
+        a) Name and Elevator Pitch  x
+        b) Cycle through Images in a header on an interval
+        c) Simulate a "login" button with an ajax request to a placeholder api
+            - Change the header to the name of the fetched user when the data is returned
+        d) Optional
+            -create a login.json file with a username and password
+            -when a user tries to login, make an ajax call to that file, and check the credentials
+            -
+    2) Portfolio Page
+        a) List personal or professional projects
+        b) Each project has a link to a github
+        c) Each project is either clickable, or has an associated button
+            -Click will poplate a text div with longer description of the personal project
+        d) Optonal 
+            -Add a text input that will allow users to search the projects based on name or tags
+    3) Contact Page
+        a) Contains a HTML form with a fields to capture user's contant information
+        b) When a user submites the form, prevent the default behavior, and add custom behavior
+            -Capture the user's information
+            -dynamically generate divs that will display each user's infomation
+            - The div should also display the date and time of the submission
+        c) Keep a count of the number of users who submitted data
+        d) Add two buttons on each generated div 
+            - one will remove that div.
+            - one that will pop up an alert or modal "contacting" that person
+        e) Optional
+            - Add a button that will randomize the order of the users
+
+
+
+Use HTML, CSS, and Javascript
+    1) Every page has a conisitent header and footer
+    2) Consistent Sidebar with soical media links optional
+    3) Bootstrap optional
+    4) None of the data needs to persist, or move between pages
+3 HTML Pages
+    1) Landing Page (index.html)
+        a) Name and Elevator Pitch
+        b) Add images to the page with alt text
+        
+    2) Portfolio Page
+        a) List personal or professional projects
+        b) Each project has a link to a github or deployed version of the project
+        
+    3) Contact Page
+        a) Contains a HTML form with a fields to capture user's contant information
