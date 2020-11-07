@@ -1,9 +1,3 @@
-// const expandables = document.querySelectorAll(".project-expander");
-
-// for(expandable of expandables){
-//     expandable.addEventListener("click", clickExpand);
-// }
-
 function toggleExpand(event){
     let val = document.getElementById(event.target.value);
     if(val.className === "project-collapse"){

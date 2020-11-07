@@ -1,8 +1,13 @@
 const pics = ["img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg"]
 const picContainer = document.getElementById("pictures");
-var currentIndex = 1;
 setBannerImages(pics);
+var index = 1;
+
 rotateImages();
+setTimeout(rotateImages, 10000);
+setTimeout(rotateImages, 20000);
+
+
 
 function setBannerImages(picArray) {
     let i = 1;
@@ -11,9 +16,9 @@ function setBannerImages(picArray) {
         let picDiv = document.createElement("div");
         img.setAttribute("src", pic);
         img.setAttribute("alt", pic);
-        img.setAttribute("class", "hidden");
-        img.setAttribute("id", i);
-        i++
+        picDiv.setAttribute("class", "hidden");
+        picDiv.setAttribute("id", `image-${i}`);
+        i++;
         picContainer.append(picDiv);
         picDiv.append(img);
     });
@@ -21,14 +26,7 @@ function setBannerImages(picArray) {
 
 
 function rotateImages(){
-
-    if(currentIndex === 3){
-        document.getElementById(currentIndex).setAttribute("class", "image-fader");
-        currentIndex = 1;
-    }else{
-        document.getElementById(currentIndex).setAttribute("class", "image-fader");
-        currentIndex++;
-    }
-    
-
+    document.getElementById(`image-${index}`).setAttribute("class", "image-fader");
+    index++;    
 }
+

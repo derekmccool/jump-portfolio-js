@@ -8,25 +8,35 @@
 
 </head>
 <body>
-    <nav>
-        <div><a href="index.html">derek mccool</a></div>
-        <div><a href="portfolio.html">portfolio</a></div>
-        <div><a href="contact.html">contact</a></div>
-        <div>
-            <form action="index.html" method="GET" id="login-form" class="form"> 
+    <div id="overlay">
+        <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+        <div class="modal-body">
+            <form  method="GET" id="login-form" class="form"> 
                 <label for="username" >username</label>
                 <input type="text" name="username" id="username" />
                 <label for="username">password</label>
                 <input type="text" name="password" id="password" />
                 <button type="submit" id="submit">login</button>
             </form>
-            <div class="hidden" id="logout" onclick="logOut()"><button>logout</button></div>
+        </div>
+    </div>
+
+    <nav>
+        <div><a href="index.html">derek mccool</a></div>
+        <div><a href="portfolio.html">portfolio</a></div>
+        <div><a href="contact.html">contact</a></div>
+        <div>
+            <div  id="login" onclick="logIn()"><button class="log-btn">login</button></div>
+            <div class="hidden" id="logout" onclick="logOut()"><button class="log-btn">logout</button></div>
         </div>
     </nav>
     <h2 id="welcome" class="hidden">Welcome!</h2>
+ 
     <h1>my projects</h1>
     <section>
         <h2>cyberpunk style vending machine</h2>
+        <img src="img/vendingmachine.png">
+        <br>
         <button class="project-expander" onclick="toggleExpand(event)" value="proj1">See Details</button>
         <div class="project-collapse" id="proj1">
                 <h3>description</h3>
@@ -54,6 +64,8 @@
     </section>
     <section>
         <h2>library management system</h2>
+        <img src="img/lms.png">
+        <br>
         <button class="project-expander" onclick="toggleExpand(event)" value="proj2">See Details</button>
         <div class="project-collapse" id="proj2">
             <h3>description</h3>

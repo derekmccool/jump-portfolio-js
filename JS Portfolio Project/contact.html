@@ -7,11 +7,9 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div><a href="index.html">derek mccool</a></div>
-        <div><a href="portfolio.html">portfolio</a></div>
-        <div><a href="contact.html">contact</a></div>
-        <div>
+    <div id="overlay">
+        <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+        <div class="modal-body">
             <form action="index.html" method="GET" id="login-form" class="form"> 
                 <label for="username" >username</label>
                 <input type="text" name="username" id="username" />
@@ -19,23 +17,38 @@
                 <input type="text" name="password" id="password" />
                 <button type="submit" id="submit">login</button>
             </form>
-            <div class="hidden" id="logout" onclick="logOut()"><button>logout</button></div>
+        </div>
+    </div>
+
+    <nav>
+        <div><a href="index.html">derek mccool</a></div>
+        <div><a href="portfolio.html">portfolio</a></div>
+        <div><a href="contact.html">contact</a></div>
+        <div>
+            <div  id="login" onclick="logIn()"><button class="log-btn">login</button></div>
+            <div class="hidden" id="logout" onclick="logOut()"><button class="log-btn">logout</button></div>
         </div>
     </nav>
     <h2 id="welcome" class="hidden">Welcome!</h2>
+ 
 
     <h1>Contact Me</h1>
     <div>
-        <form method="GET" id="login-form" class="form"> 
+        <form method="GET" id="contact-form" class="form"> 
             <label for="name" >name</label>
             <input type="text" name="name" id="name" />
             <label for="email">email</label>
             <input type="email" name="email" id="email" />
-            <button type="submit" id="contactMe">Send</button>
+            <button type="submit" id="contact-me">Send</button>
         </form>
     </div>
-    <div id="c
+    <div id="contacts">
+        <h3>Contacts</h3>
+
+    </div>
 
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+
 </body>
 </html>

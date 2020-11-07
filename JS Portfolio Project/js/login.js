@@ -4,8 +4,10 @@ const handleSubmit = event => {
     const password = document.getElementById("password").value;
     welcome.textContent = `Welcome ${username}`;
     welcome.setAttribute("class", "welcome-fade");
-    form.setAttribute("class", "hidden");
     logout.setAttribute("class", "");
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("login").style.display = "none";
+
 }
 
 const submit = document.getElementById("submit");
@@ -16,6 +18,15 @@ const form = document.getElementById("login-form");
 const logout = document.getElementById("logout");
 
 function logOut(){
-    logout.setAttribute("class", "hidden");
-    form.setAttribute("class", "form");
+    document.getElementById("login").style.display = "block";
+    document.getElementById("logout").style.display = "none";
+
+}
+
+function logIn(event){
+    document.getElementById("overlay").style.display = "block";
+}
+
+function hideOverlay(){
+    document.getElementById("overlay").style.display = "none";
 }
