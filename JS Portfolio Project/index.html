@@ -5,54 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>derek mccool</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div id="overlay">
-        <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+    <div class="overlay" id="login-overlay">
         <div class="modal-body">
+            <div class="modal-header">
+                <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+                <h2>Login</h2>
+            </div>
             <form action="index.html" method="GET" id="login-form" class="form"> 
                 <label for="username" >username</label>
                 <input type="text" name="username" id="username" />
                 <label for="username">password</label>
                 <input type="text" name="password" id="password" />
-                <button type="submit" id="submit">login</button>
+                <br>
+                <button class="login-btn" type="submit" id="submit">login</button>
             </form>
         </div>
     </div>
 
     <nav>
-        <div><a href="index.html">derek mccool</a></div>
-        <div><a href="portfolio.html">portfolio</a></div>
-        <div><a href="contact.html">contact</a></div>
-        <div>
-            <div  id="login" onclick="logIn()"><button class="log-btn">login</button></div>
-            <div class="hidden" id="logout" onclick="logOut()"><button class="log-btn">logout</button></div>
+        <div class="nav-title">
+            <div class="nav-link" id="home-link"><a href="index.html">derek mc<span id="cool">cool</span></a></div>
+        </div>
+            <div class="nav-link" id="projects-link"><a href="projects.html">projects</a></div>
+            <div class="nav-link" id="contact-link"><a href="contact.html">contact</a></div>
+        <div class="nav-buttons">
+            <button id="login" onclick="logIn()" class="log-btn">login</button>
+            <button id="logout" onclick="logOut()" class="log-btn">logout</button></div>
         </div>
     </nav>
     <h2 id="welcome" class="hidden">Welcome!</h2>
- 
-    <div id="pictures">
+    <h1 id="intro-title"><span id="hello-1">hello!</span> <span id="hello-2">my name is derek mccool</span> <span id="hello-3">and this is my portfolio</span></h1>
 
-    </div>
-    
-    <h1 >hello, my name is derek mccool</h1>
-    <div class="about-container">
-        <div class="about-section">
-            <section>
-                <h2 class="section-title">about me</h2>
-                <p>
-                    i am a full-stack java developer and currently completing the JUMP program at cognixia.
-                </p>
-                    i am completing my training through the JUMP program at cognixia.
-                <p>
-                    i code with passion and a thirst for the solution.  i am a life long learner that is eager to tackle any new technology that comes my way.
-                </p>  
-            </section>
+    <div id="section-box">
+        <div  class="profile-container" id="section-1">
+            <h2>about me</h2>
+            <p>
+                i am a full-stack java developer and currently completing the JUMP program at cognixia.
+                i am completing my training through the JUMP program at cognixia.
+                i code with passion and a thirst for the solution.  i am a life long learner that is eager to tackle any new technology that comes my way.
+            </p>  
         </div>
-        <div class="about-section">
-        <section>
-            <h2 class="section-title">why software development?</h2>
+
+        <div  class="profile-container" id="section-2">
+            <h2>why software development?</h2>
             <p>
                 i have a passion for computers that i developed as a child.  ihad taken some programming courses in college
                 and a few years ago, the passion was rekindled.  i ended up completing an online coding bootcamp focused on ruby on rails
@@ -60,24 +62,32 @@
                 during that time i found that when I am coding, it never actually feels like work.  
                 that feeling is what i have always wanted in a career and I am lucky to have found it.
             </p>
-            <p>
-                i enjoy creating things as well as improving them.
-                to me, software development feels like an art.  
-                being able to create and improve something that can allow people to better their daily lives is what drives my passion.
-            </p>
-        </section>
-   </div>
-       <div class="about-section">
-        <section>
-            <h2 class="section-title">what skills do i bring to the job?</h2>
+        </div>
+
+        <div  class="profile-container" id="section-3">
+            <h2>what i bring</h2>
             <p>i first and foremost bring my passion. i strive to get the job done correctly and timely, and for that i pour my heart and soul into my work.</p>
             <p>i bring a team-centric attitude.  i take accountability for myself and my teammates, i strive for team success.</p>
             <p>i bring dedication.  to the team. to the project. to the company. i will stay until a project is completed or switch hats to help where needed.</p>
-        </section>
-       </div>
-   
+        </div>
+
+        </div>
+        <div class ="section-btns">
+            <div>
+                <button id="about-me-btn" class="section-btn" onclick="showSection(event)" value=1>about me</button>
+            </div>
+            <div >
+                <button id="why-development-btn" class="section-btn" onclick="showSection(event)" value=2>why software development?</button>
+            </div>
+            <div>
+                <button id="what-i-bring-btn" class="section-btn" onclick="showSection(event)" value=3>what i bring</button>
+            </div>
+        </div>
     </div>
-    
+
+
+ 
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/bannerImages.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 

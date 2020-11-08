@@ -33,13 +33,16 @@
     <h2 id="welcome" class="hidden">Welcome!</h2>
  
     <h1>my projects</h1>
-    <section>
-        <h2>cyberpunk style vending machine</h2>
-        <img src="img/vendingmachine.png">
-        <br>
-        <button class="project-expander" onclick="toggleExpand(event)" value="proj1">See Details</button>
+    <section class="project-container">
+        <div>
+            <h2>cyberpunk style vending machine</h2>
+            <img class="project-img" src="img/vendingmachine.png">
+            <br>
+            <button class="project-expander project-btn" onclick="toggleExpand(event)" value="proj1">See Details</button>
+        </div>
+
         <div class="project-collapse" id="proj1">
-                <h3>description</h3>
+                <h2 class="project-description">description</h2>
                 <p>the purpose of this project was to create a user interface for a vending machine.  items from the machine were to be obtained by calling to an api.</p>
                 <p>my apprach was to design the vending machine with a cyberpunk aesthetic.</p>
                 <h3>goals</h3>

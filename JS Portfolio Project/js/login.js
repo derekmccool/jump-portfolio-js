@@ -5,7 +5,7 @@ const handleSubmit = event => {
     welcome.textContent = `Welcome ${username}`;
     welcome.setAttribute("class", "welcome-fade");
     logout.setAttribute("class", "");
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("login-overlay").style.display = "none";
     document.getElementById("login").style.display = "none";
 
 }
@@ -24,9 +24,9 @@ function logOut(){
 }
 
 function logIn(event){
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("login-overlay").style.display = "block";
 }
 
 function hideOverlay(){
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("login-overlay").style.display = "none";
 }

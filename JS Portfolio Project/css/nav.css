@@ -1,0 +1,66 @@
+nav{
+    background-color: var(--primary-color);
+    height: 3em;
+    color: white;
+    font-size: 2em;
+    position: relative;
+}
+
+.nav-title{
+    display: block;
+    font-size: 1.1em;
+}
+
+#projects-link{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+#contact-link{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.nav-link{
+    transition: all .3s ease-in-out
+}
+
+.nav-link:hover{
+    letter-spacing: 1em;
+}
+
+.nav-link:hover #cool,
+.nav-link:hover a{
+    color: var(--secondary-color);
+}
+
+.log-btn{
+    font-family: 'Goldman', cursive;
+    margin-top: .65em;
+    background-color: white;
+    border: none;
+    font-size: .75em;
+    border-radius: 50px;
+    padding:  1em .5em;
+    border-bottom: solid 5px var(--accent-color);
+    transition: all .3s ease-in-out
+}
+
+.log-btn:hover{
+    margin-top: 1.15em;
+    cursor: pointer;
+    padding:  .5em 2em;;
+}
+
+.log-btn:active{
+    border-bottom: none;
+}
+
+
+#logout{
+    font-size: .65em;
+    padding:  1.4em .5em;
+    display: none;
+}

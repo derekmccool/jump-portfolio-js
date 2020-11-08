@@ -1,0 +1,9 @@
+.project-collapse{
+    display: none;
+    height: 0;
+}
+
+.project-expand{
+    max-height: 400px;
+    animation: fadeIn ease 2s;
+}
