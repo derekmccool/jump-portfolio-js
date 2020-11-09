@@ -33,7 +33,7 @@
     left: 0;
     right: 0;
     position: sticky;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     height: 500px;
     width: 600px;
     margin-left: auto;

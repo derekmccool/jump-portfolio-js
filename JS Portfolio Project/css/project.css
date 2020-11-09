@@ -1,9 +1,78 @@
 .project-collapse{
     display: none;
-    height: 0;
 }
 
 .project-expand{
-    max-height: 400px;
+    font-size: .85em;
+    width: 35%;
+    max-height: 20em;
     animation: fadeIn ease 2s;
+    color: var(--secondary-color);
+}
+
+.project-img-container{
+    text-align: center;
+    width: 45%;
+    height: 20em;
+    max-height: 20em;
+}
+
+.project-img-container-shifted{
+    height: 20em;
+    max-height: 20em;
+}
+
+.project-img{
+    height: 20em;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    font-size: 1.2em;
+    margin: 2em;
+    height: 30em;
+    transition: all 1s ease-in-out;
+}
+.project-description{
+    color: var(--primary-color);
+}
+
+.project-btn{
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--accent-color);
+}
+
+.project-btn:hover{
+    cursor: pointer;
+    text-shadow: var(--text-glow);
+}
+
+.project-title{
+    color: var(--secondary-color);
+}
+
+.my-projects{
+    margin-top: 4em;
+    background-color: white;
+}
+
+.technologies{
+    color: var(--accent-color);
+    text-shadow: var(--text-glow);
+    font-size: 1.25em;
+}
+
+.goals{
+    color: var(--accent-color);
+}
+
+.technologies-header{
+    color: white;
 }

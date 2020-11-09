@@ -3,16 +3,19 @@
 }
 
 #hello-1{
+    color: var(--primary-color);
     opacity: 0;
     animation: fadeIn 2s ease-in .5s forwards;
 }
 
 #hello-2{
+    color: var(--primary-color);
     opacity: 0;
     animation: fadeIn 2s ease-in 1.5s forwards;
 }
 
 #hello-3{
+    color: var(--primary-color);
     opacity: 0;
     animation: fadeIn 2s ease-in 3.5s forwards;
 }

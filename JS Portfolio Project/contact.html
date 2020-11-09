@@ -5,28 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>derek mccool contact page</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
 </head>
 <body>
-    <div id="overlay">
-        <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+    <div class="overlay" id="login-overlay">
         <div class="modal-body">
+            <div class="modal-header">
+                <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+                <h2>Login</h2>
+            </div>
             <form action="index.html" method="GET" id="login-form" class="form"> 
                 <label for="username" >username</label>
                 <input type="text" name="username" id="username" />
                 <label for="username">password</label>
                 <input type="text" name="password" id="password" />
-                <button type="submit" id="submit">login</button>
+                <br>
+                <button class="login-btn" type="submit" id="submit">login</button>
             </form>
         </div>
     </div>
 
     <nav>
-        <div><a href="index.html">derek mccool</a></div>
-        <div><a href="portfolio.html">portfolio</a></div>
-        <div><a href="contact.html">contact</a></div>
-        <div>
-            <div  id="login" onclick="logIn()"><button class="log-btn">login</button></div>
-            <div class="hidden" id="logout" onclick="logOut()"><button class="log-btn">logout</button></div>
+        <div class="nav-title">
+            <div class="nav-link" id="home-link"><a href="index.html">derek mc<span id="cool">cool</span></a></div>
+        </div>
+            <div class="nav-link" id="projects-link"><a href="projects.html">projects</a></div>
+            <div class="nav-link" id="contact-link"><a href="contact.html">contact</a></div>
+        <div class="nav-buttons">
+            <button id="login" onclick="logIn()" class="log-btn">login</button>
+            <button id="logout" onclick="logOut()" class="log-btn">logout</button></div>
         </div>
     </nav>
     <h2 id="welcome" class="hidden">Welcome!</h2>

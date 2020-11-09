@@ -5,100 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>derek mccool projects</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 
 </head>
 <body>
-    <div id="overlay">
-        <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+    <div class="overlay" id="login-overlay">
         <div class="modal-body">
-            <form  method="GET" id="login-form" class="form"> 
+            <div class="modal-header">
+                <div id="close-overlay" onclick="hideOverlay()">&#10005;</div>
+                <h2>Login</h2>
+            </div>
+            <form action="index.html" method="GET" id="login-form" class="form"> 
                 <label for="username" >username</label>
                 <input type="text" name="username" id="username" />
                 <label for="username">password</label>
                 <input type="text" name="password" id="password" />
-                <button type="submit" id="submit">login</button>
+                <br>
+                <button class="login-btn" type="submit" id="submit">login</button>
             </form>
         </div>
     </div>
 
     <nav>
-        <div><a href="index.html">derek mccool</a></div>
-        <div><a href="portfolio.html">portfolio</a></div>
-        <div><a href="contact.html">contact</a></div>
-        <div>
-            <div  id="login" onclick="logIn()"><button class="log-btn">login</button></div>
-            <div class="hidden" id="logout" onclick="logOut()"><button class="log-btn">logout</button></div>
+        <div class="nav-title">
+            <div class="nav-link" id="home-link"><a href="index.html">derek mc<span id="cool">cool</span></a></div>
+        </div>
+            <div class="nav-link" id="projects-link"><a href="projects.html">projects</a></div>
+            <div class="nav-link" id="contact-link"><a href="contact.html">contact</a></div>
+        <div class="nav-buttons">
+            <button id="login" onclick="logIn()" class="log-btn">login</button>
+            <button id="logout" onclick="logOut()" class="log-btn">logout</button></div>
         </div>
     </nav>
     <h2 id="welcome" class="hidden">Welcome!</h2>
  
-    <h1>my projects</h1>
+    <h1 class="my-projects">my projects</h1>
     <section class="project-container">
-        <div>
-            <h2>cyberpunk style vending machine</h2>
+        <div class="project-img-container" id="cyberpunk">
+            <h2 class="project-title">cyberpunk style vending machine</h2>
             <img class="project-img" src="img/vendingmachine.png">
-            <br>
-            <button class="project-expander project-btn" onclick="toggleExpand(event)" value="proj1">See Details</button>
         </div>
-
         <div class="project-collapse" id="proj1">
                 <h2 class="project-description">description</h2>
                 <p>the purpose of this project was to create a user interface for a vending machine.  items from the machine were to be obtained by calling to an api.</p>
                 <p>my apprach was to design the vending machine with a cyberpunk aesthetic.</p>
-                <h3>goals</h3>
-                <ul>
-                    <li>users should be able to click on a menu item and it should display in the message window</li>
-                    <li>users should be able add money to the vending machine, it should display in the balance</li>
-                    <li>users should be able to click purchase after selecting an item, displaying the result in the message window</li>
-                    <li>users should be alerted if an item is out of stock or if purchase is attempted when balance is less than cost of item</li>
-                    <li>after purchase,  the user should receive their change and balance should be set to 0</li>
-                </ul>
-                <h3>technologies</h3>
-                <ul>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>ajax</li>
-                    <li>jquery</li>
-                </ul>
+                <h3 class="goals">goals</h3>
+                
+                    <p>users should be able to click on a menu item and it should display in the message window</p>
+                    <p>users should be able add money to the vending machine, it should display in the balance</p>
+                    <p>users should be able to click purchase after selecting an item, displaying the result in the message window</p>
+                    <p>users should be alerted if an item is out of stock or if purchase is attempted when balance is less than cost of item</p>
+                    <p>after purchase,  the user should receive their change and balance should be set to 0</p>
+
+                <h3 class="technologies-header">technologies</h3>
+                    <span class="technologies"> 
+                        html css ajax jquery
+                    </span>
+                    <br>
+                    <br>
                <a href="https://cyberpunkvending.herokuapp.com/" target="blank"><button>Demo</button></a>
                <a href="https://github.com/derekmccool/vending-machine" target="blank"><button>Github</button></a>
         </div>
+    </section>
+    <button class="project-expander project-btn" onclick="toggleExpand(event)" value="proj1">See Details</button>
+    <section class="project-container">
+        <div class="project-img-container" id="lms">
+            <h2 class="project-title">library management system</h2>
+            <img class="project-img" src="img/lms.png">
+        </div>
+        <div class="project-collapse" id="proj2">
+                <h2 class="project-description">description</h2>
+                <p>the purpose of this project was to create an application that allowed librarians to make edits to books in a library, and grant access to patrons</p>
+                <p>this was a group project, utilizing an agile environment</p>
+                <h3 class="goals">goals</h3>
+                <p>librarians and patrons should be able to login </p>
+                <p>librarians and patrons should be able to view all books in the library</p>
+                <p>librarians create/update/delete books and grant access to patrons</p>
+                <p>patrons should be able to checkout books if their account has been granted access</p>
+                <p>patrons should not be able to check out a book that is currently checked out by another patron</p>
+                <p>patrons should be able to return books</p>
+
+                <h3 class="technologies-header">technologies</h3>
+                    <span class="technologies"> 
+                        html css java jsp servlets tomcat
+                    </span>
+                    <br>
+                    <br>
+                    <a href="https://github.com/CryptoDimaino/LibraryCrudProject" target="blank"><button>Github</button></a>
+
+        </div>
        
     </section>
-    <section>
-        <h2>library management system</h2>
-        <img src="img/lms.png">
-        <br>
-        <button class="project-expander" onclick="toggleExpand(event)" value="proj2">See Details</button>
-        <div class="project-collapse" id="proj2">
-            <h3>description</h3>
-            <p>the purpose of this project was to create an application that allowed librarians to make edits to books in a library, and grant access to patrons</p>
-            <p>this was a group project, utilizing an agile environment</p>
+    <button class="project-expander project-btn" onclick="toggleExpand(event)" value="proj2">See Details</button>
 
-            <h3>goals</h3>
-            <ul>
-                <li>librarians and patrons should be able to login </li>
-                <li>librarians and patrons should be able to view all books in the library</li>
-                <li>librarians create/update/delete books and grant access to patrons</li>
-                <li>patrons should be able to checkout books if their account has been granted access</li>
-                <li>patrons should not be able to check out a book that is currently checked out by another patron</li>
-                <li>patrons should be able to return books</li>
-
-            </ul>
-  
-            <h3>technologies</h3>
-            <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>java</li>
-                <li>jsp servlets</li>
-                <li>tomcat</li>
-            </ul>
-    
-           <a href="https://github.com/CryptoDimaino/LibraryCrudProject" target="blank"><button>Github</button></a>
-        </div>
-    </section>
-  
     <script type="text/javascript" src="js/projects.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 </body>
