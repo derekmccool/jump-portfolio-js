@@ -12,7 +12,6 @@
 
 }
 
-
 :focus{
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
@@ -37,7 +36,6 @@ a:visited{
 }
 
 
-
 .hidden{
       display: none;
   }
@@ -49,31 +47,11 @@ a:visited{
     opacity: 0;
 }
 
-.contact-row{
-    height: 2em;
-    margin-top: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    background-color: red;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-
+.page-title{
+    margin-top: 4em;
+    background-color: white;
 }
-.name-div, 
-.email-div,
-.button-div
-{
-    width: 33%;
-}
-.button-div{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
 
 @keyframes fadeInOut {
     0% {opacity: 0;}

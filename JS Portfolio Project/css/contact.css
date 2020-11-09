@@ -1,0 +1,109 @@
+.contact-row{
+    color: var(--accent-color);
+    font-size: 1.5em;
+    height: 3em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: var(--text-glow);
+    box-shadow: var(--bs);
+
+}
+
+.contact-titles{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    height: 3em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-div, 
+.email-div,
+.button-div,
+.time-div
+{
+    width: 25%;
+}
+.button-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact-form{
+    color: var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: black;
+    width: 50%;
+    font-size: 1.5em;
+
+}
+
+#contact-form label{
+    margin: 1em;
+}
+
+#contact-form input{
+    border-radius: 15px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+#contact-form input:focus{
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.733);
+    text-shadow: var(--text-glow);
+    border-radius: 15px;
+}
+
+#contact-form button{
+    padding: 0 1em  ;
+    font-family: 'Goldman', cursive;
+    background: none;
+    border-radius: 25px;
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+#contact-form button:hover{
+    cursor: pointer;
+    text-shadow: var(--text-glow);
+}
+
+.message-btn,
+.delete-btn{
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: var(--accent-color);
+}
+
+.message-btn:hover,
+.delete-btn:hover{
+    cursor: pointer;
+    text-shadow: var(--text-glow);
+}
+
+#contacts{
+    color: white;
+}
+
+.contact-title{
+    width: 25%;
+}

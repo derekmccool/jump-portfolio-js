@@ -58,11 +58,6 @@
     color: var(--secondary-color);
 }
 
-.my-projects{
-    margin-top: 4em;
-    background-color: white;
-}
-
 .technologies{
     color: var(--accent-color);
     text-shadow: var(--text-glow);
